@@ -62,7 +62,7 @@ dot.edge('B', 'D', label='No')
 dot.edge('D', 'E', label='Yes')
 dot.edge('D', 'F', label='No')
 
-dot.render('decision_tree', view=False)
+#dot.render('decision_tree', view=False)
 
 st.graphviz_chart(dot, use_container_width=True)
 
