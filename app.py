@@ -11,7 +11,7 @@ st.title('GitHub Search')
 
 from graphviz import Digraph
 
-dot = Digraph(comment='Number Classifier', format='png')
+dot = Digraph(comment='Number Classifier')
 
 # Node style settings
 dot.attr('node', shape='ellipse', color='lightblue2', style='filled')
@@ -31,8 +31,10 @@ dot.edge('B', 'D', label='No')
 dot.edge('D', 'E', label='Yes')
 dot.edge('D', 'F', label='No')
 
-#dot.render('decision_tree', view=False)
-
 st.graphviz_chart(dot, use_container_width=True)
+
+image_filename = 'my_graph.png'
+dot.format = 'png'
+dot.render(filename=image_filename, view=False)
 
 
